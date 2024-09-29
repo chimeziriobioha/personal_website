@@ -7,6 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    /* background-image: url('FAITH_in_the_DARK_small_size.jpg'); */
 }
 
 header {
@@ -58,41 +59,6 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-}
-
-
-/* #into {
-    background-image: url('image.jpg');
-} */
-
-/* General styling for hero section */
-#hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-}
-  
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-    /* background-image: url('image.jpg'); */
-}
-  
-/* Styling for hero image */
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-  
-/* Styling for hero content */
-.hero-content {
-    max-width: 600px;
 }
 
 .cta-btn {
@@ -336,6 +302,100 @@ footer {
       gap: 20px;
   }
 }
+
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row; /* Image and text side by side on larger screens */
+}
+
+.about-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* For mobile screens (width less than 768px) */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stacks image on top of the text */
+    align-items: center; /* Centers both image and text on mobile */
+    text-align: center; /* Centers the text content as well */
+  }
+
+  .about-img {
+    margin-bottom: 15px; /* Adds space between image and text */
+  }
+
+  .about-text {
+    text-align: center; /* Ensures the text is centered on mobile */
+  }
+}
+
+
+/* Styling for the Hero Section */
+#hero {
+  padding: 50px 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Large font size for desktop */
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.hero-img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%; /* Optional: You can adjust the style of the image */
+}
+
+/* For mobile screens (width less than 768px) */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stacks image on top of the text */
+    align-items: center;
+    text-align: center; /* Centers text on mobile */
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem; /* Slightly smaller but still large on mobile */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Adjusts paragraph size for readability on mobile */
+  }
+
+  .hero-img {
+    margin-bottom: 20px; /* Adds space between image and text */
+    max-width: 200px; /* Adjust the image size for mobile */
+  }
+}
+
+
+
+
 
   
   
