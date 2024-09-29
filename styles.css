@@ -236,112 +236,107 @@ footer {
   
 /* Contact Section */
 #contact {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-email {
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+}
+
+.email-btn {
+  display: block;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-email h3 {
+  margin-bottom: 20px;
+}
+
+.email-btn:hover {
+  background-color: #45a049;
+}
+
+/* Social Media Section */
+.social-media {
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
+}
+
+.social-media h3 {
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-icon {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.linkedin {
+  background-color: #0077B5;
+}
+
+.github {
+  background-color: #333;
+}
+
+.twitter {
+  background-color: #1DA1F2;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
   .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .contact-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Social Media Section */
-  .social-media {
-    text-align: left;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .social-media h3 {
-    margin-bottom: 20px;
-  }
-  
-  .social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .social-icon {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .linkedin {
-    background-color: #0077B5;
-  }
-  
-  .github {
-    background-color: #333;
-  }
-  
-  .twitter {
-    background-color: #1DA1F2;
-  }
-  
-  .social-icon:hover {
-    opacity: 0.8;
-  }
-  
-  /* Responsive design */
-  @media (min-width: 768px) {
-    .contact-wrapper {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-    }
-  
-    .social-media {
+  }
+
+  .social-media {
       text-align: left;
-    }
-  
-    .social-links {
+  }
+
+  .social-links {
       flex-direction: row;
       gap: 20px;
-    }
   }
+}
+
   
   
   

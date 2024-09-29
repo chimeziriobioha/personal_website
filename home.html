@@ -9,22 +9,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="page-top">
   <!-- Navigation Bar -->
   <header>
     <nav class="sticky-nav">
-      <!-- <div class="logo">
-        <h1>Chimeziri: The Trader Who Turned Techie</h1>
-      </div> -->
       <ul>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#page-top">Page Top</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section id="into">
     <div class="logo">
       <h1>Chimeziri: The Trader Who Turned Techie</h1>
@@ -33,34 +32,7 @@
       Finance, and Governance sectors, but highly adaptable to other sectors.</p>
   </section>
 
-  <!-- Hero Section -->
-  <!-- <section id="hero">
-    <div class="hero-container">
-      <div class="hero-image">
-        <img src="image.jpg" alt="Developer working on laptop" width="100" height="200">
-      </div>
-      <div class="hero-content">
-        <h2>Hi, I'm Chimeziri Obioha</h2>
-        <p>I am passionate about building secure digital systems for end-to-end records management in Trade,
-          Finance, and Governance sectors, but highly adaptable to other sectors.</p>
-        <a href="#about" class="cta-btn">Read More</a>
-      </div>
-    </div>
-  </section> -->
-
   <!-- Projects Section -->
-  <!-- <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project One</h3>
-      <p>Description of the first project goes here. This is where you can showcase your work with links to repositories
-        or live demos.</p>
-    </div>
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>Description of the second project goes here. You can describe the challenges faced and solutions provided.</p>
-    </div>
-  </section> -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-container">
@@ -89,7 +61,6 @@
 
   <!-- About Section -->
   <section id="about">
-    <!-- <h2>About Me</h2> -->
     <h2>Hi, I'm Chimeziri Obioha</h2>
     <p>I've been in active backend software development since 2020, specializing in creating secure, efficient, scalable
       backend systems for diverse projects. With a deep understanding of databases, APIs, and server management, I bring
@@ -112,17 +83,6 @@
   </section>
 
   <!-- Skills Section -->
-  <!-- <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Node.js</li>
-      <li>Python</li>
-      <li>Database Management (SQL, NoSQL)</li>
-      <li>REST APIs</li>
-      <li>Cloud Services (AWS, Azure)</li>
-    </ul>
-  </section> -->
-  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-container">
@@ -136,38 +96,17 @@
 
 
   <!-- Contact Section -->
-  <!-- <section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you're looking to hire a backend developer or have any inquiries, feel free to reach out!</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section> -->
-  <!-- Contact Section -->
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
     <p>If you're looking to hire a backend developer or have any inquiries, feel free to reach out!</p>
 
     <div class="contact-wrapper">
-      <!-- Contact Form -->
-      <!-- <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form> -->
+      <!-- Contact Email as Button -->
+      <div class="contact-email">
+        <h3>Via email:</h3>
+        <a href="mailto:your-email@example.com" class="email-btn">Email Me</a>
+      </div>
 
-      <form class="contact-form" onsubmit="sendEmail(event)">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      
       <!-- Social Media Links -->
       <div class="social-media">
         <h3>Connect with me:</h3>
@@ -185,28 +124,6 @@
   <footer>
     <p>&copy; 2024 Chimeziri Obioha. All Rights Reserved.</p>
   </footer>
-
-  
-  <!-- JavaScript -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("your_user_id");  // Replace 'your_user_id' with your EmailJS user ID
-    })();
-  </script>
-  <script type="text/javascript">
-    function sendEmail(event) {
-      event.preventDefault();  // Prevent the form from refreshing the page
-  
-      // Send form data via EmailJS
-      emailjs.sendForm('your_service_id', 'your_template_id', event.target)
-        .then(function(response) {
-          alert('Email sent successfully!');
-        }, function(error) {
-          alert('An error occurred while sending the email.');
-        });
-    }
-  </script>  
 
 </body>
 
