@@ -10,8 +10,10 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    /* color: #fff;
+    background: #333; */
+    color: #333;
+    background: #fff;
     padding: 10px 0;
     text-align: center;
     position: sticky;
@@ -28,7 +30,8 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    /* color: #fff; */
+    color: #333;
     text-decoration: none;
     font-size: 18px;
 }
@@ -57,6 +60,11 @@ footer {
     text-align: center;
 }
 
+
+/* #into {
+    background-image: url('image.jpg');
+} */
+
 /* General styling for hero section */
 #hero {
     display: flex;
@@ -72,6 +80,7 @@ footer {
     gap: 20px;
     max-width: 1200px;
     width: 100%;
+    /* background-image: url('image.jpg'); */
 }
   
 /* Styling for hero image */
@@ -126,7 +135,7 @@ footer {
   
 /* General styles for h1 */
 .logo h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     white-space: nowrap; /* Ensures no automatic line breaks */
 }
@@ -139,5 +148,56 @@ footer {
         white-space: normal;  /* Allows line breaks */
     }
 }
+
+#about p {
+    margin-bottom: 20px;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #projects {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .project {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, flex-basis */
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .projects-container {
+      flex-direction: column;
+    }
+    .project {
+      flex: 1 1 100%; /* Take full width on smaller screens */
+    }
+  }
+  
   
   
