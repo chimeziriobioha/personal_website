@@ -100,13 +100,19 @@
       Finance, and Governance sectors, but I am highly adaptable to other sectors.
     </p>
 
-    <p></p>
-    I am open to collaborations and contracts.
+    <p>
+      I used to be a motorcycle spare parts trader before I discovered and got fasinated by the posibilities of modern
+      technologies. I explored, and the accopanying challenges turned out to sit quite well with me. The rest, as they
+      say, is history.
+    </p>
+
+    <p>
+      Have something I can help you do? <a href="#contact" class="cta-btn">Let's Have A Chat</a>
     </p>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
+  <!-- <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Node.js</li>
@@ -115,10 +121,22 @@
       <li>REST APIs</li>
       <li>Cloud Services (AWS, Azure)</li>
     </ul>
+  </section> -->
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">Node.js</div>
+      <div class="skill">Python</div>
+      <div class="skill">Database Management (SQL, NoSQL)</div>
+      <div class="skill">REST APIs</div>
+      <div class="skill">Cloud Services (AWS, Azure)</div>
+    </div>
   </section>
 
+
   <!-- Contact Section -->
-  <section id="contact">
+  <!-- <section id="contact">
     <h2>Contact Me</h2>
     <p>If you're looking to hire a backend developer or have any inquiries, feel free to reach out!</p>
     <form>
@@ -127,12 +145,69 @@
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+  </section> -->
+  <!-- Contact Section -->
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you're looking to hire a backend developer or have any inquiries, feel free to reach out!</p>
+
+    <div class="contact-wrapper">
+      <!-- Contact Form -->
+      <!-- <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form> -->
+
+      <form class="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      
+      <!-- Social Media Links -->
+      <div class="social-media">
+        <h3>Connect with me:</h3>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/chimeziri" target="_blank" class="social-icon linkedin">LinkedIn</a>
+          <a href="https://github.com/chimeziri" target="_blank" class="social-icon github">GitHub</a>
+          <a href="https://twitter.com/chimeziri" target="_blank" class="social-icon twitter">Twitter</a>
+        </div>
+      </div>
+    </div>
   </section>
+
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Chimeziri Obioha. All Rights Reserved.</p>
   </footer>
+
+  
+  <!-- JavaScript -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("your_user_id");  // Replace 'your_user_id' with your EmailJS user ID
+    })();
+  </script>
+  <script type="text/javascript">
+    function sendEmail(event) {
+      event.preventDefault();  // Prevent the form from refreshing the page
+  
+      // Send form data via EmailJS
+      emailjs.sendForm('your_service_id', 'your_template_id', event.target)
+        .then(function(response) {
+          alert('Email sent successfully!');
+        }, function(error) {
+          alert('An error occurred while sending the email.');
+        });
+    }
+  </script>  
+
 </body>
 
 </html>
