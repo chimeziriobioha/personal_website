@@ -20,7 +20,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+/* nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -31,6 +31,44 @@ nav ul li a {
   color: #333;
   text-decoration: none;
   font-size: 18px;
+} */
+
+/* Styles for the <nav> */
+nav {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Center the nav only on larger screens */
+@media (min-width: 768px) {
+  nav ul {
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
 
 section {
@@ -310,6 +348,7 @@ footer {
 #projects {
   padding: 20px;
   background-color: #f4f4f4;
+  padding-top: 50px; /* Ensure the title is visible when nagigation is used */
 }
 
 h2 {
@@ -360,5 +399,70 @@ h2 {
   }
   .project {
     flex: 1 1 100%;
+  }
+}
+ 
+ /* Styling for the Invest Section */
+#invest {
+  padding: 50px 20px;
+  background-color: #e6f7ff;
+}
+
+#invest h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.invest-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.invest-img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invest-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.invest-text em {
+  font-style: italic;
+  font-weight: bold;
+  color: #0073e6;
+}
+
+.invest-text p {
+  margin-bottom: 20px;
+}
+
+.invest-text a.cta-link {
+  text-decoration: none;
+}
+
+/* Responsive for Mobile View */
+@media (max-width: 768px) {
+  .invest-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .invest-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .invest-text {
+    font-size: 1.1rem;
   }
 }
