@@ -20,64 +20,6 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-} */
-
-/* Styles for the <nav> */
-/* nav {
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  width: max-content;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-  white-space: nowrap;
-}
-
-nav::-webkit-scrollbar {
-  display: none;
-} */
-
-/* Padding for mobile views */
-/* @media (max-width: 768px) {
-  nav {
-    padding-right: 20px;
-  }
-} */
-
-/* Center the nav only on larger screens */
-/* @media (min-width: 768px) {
-  nav ul {
-    justify-content: center;
-    margin: 0 auto;
-  }
-} */
-
 /* Wrapper to hold the nav and buttons */
 .nav-wrapper {
   position: relative;
@@ -501,34 +443,34 @@ h2 {
   }
 }
 
-/* Styling for the Invest Section */
-#invest {
+/* Styling for the Let's Build Section */
+#lets-build {
   padding: 70px 30px;
   background-color: #e6f7ff;
 }
 
-#invest h2 {
+#lets-build h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 40px;
   color: #333;
 }
 
-.invest-content {
+.lets-build-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
 }
 
-.invest-img {
+.lets-build-img {
   max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.invest-text {
+.lets-build-text {
   flex: 1;
   font-size: 1.2rem;
   line-height: 1.7;
@@ -536,46 +478,42 @@ h2 {
   padding: 0 10px;
 }
 
-.invest-text em {
+.lets-build-text em {
   font-style: italic;
   font-weight: bold;
   color: #0073e6;
 }
 
-.invest-text p {
+.lets-build-text p {
   margin-bottom: 25px;
 }
 
-.invest-text a.cta-link {
+.lets-build-text a.cta-link {
   text-decoration: none;
   font-weight: bold;
   color: #0073e6;
-  /* padding: 10px 20px; */
-  /* border: 2px solid #0073e6; */
-  /* border-radius: 5px; */
   transition: background-color 0.3s, color 0.3s;
 }
 
-.invest-text a.cta-link:hover {
+.lets-build-text a.cta-link:hover {
   background-color: #0073e6;
   color: #fff;
 }
 
 /* Responsive for Mobile View */
 @media (max-width: 768px) {
-  .invest-content {
+  .lets-build-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .invest-img {
+  .lets-build-img {
     max-width: 100%;
     margin-bottom: 20px;
   }
 
-  .invest-text {
+  .lets-build-text {
     font-size: 1.1rem;
     padding: 0;
   }
 }
-
