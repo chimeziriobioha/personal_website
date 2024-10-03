@@ -40,7 +40,7 @@
 <body id="page-top">
     <!-- Navigation Bar -->
     <header>
-        <nav>
+        <!-- <nav>
             <ul>
                 <li><a href="#"></a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -50,7 +50,22 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#page-top">Page Top</a></li>
             </ul>
-        </nav>
+        </nav> -->
+        <div class="nav-wrapper">
+            <button class="scroll-btn left-btn" onclick="scrollNav('left')">←</button>
+            <nav>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#invest">Invest</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#page-top">Page Top</a></li>
+                </ul>
+            </nav>
+            <button class="scroll-btn right-btn" onclick="scrollNav('right')">→</button>
+        </div>
+
     </header>
 
     <!-- Hero Section -->
@@ -202,6 +217,55 @@
     <footer>
         <p>&copy; 2024 Chimeziri Obioha. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Function to handle scrolling the nav bar left or right
+        function scrollNav(direction) {
+            const nav = document.querySelector('nav');
+            const scrollAmount = 200; // Adjust scroll amount as needed
+            if (direction === 'left') {
+                nav.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                nav.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Optional: Add logic to hide buttons if scrolling is not possible
+        window.addEventListener('resize', toggleScrollButtons);
+        window.addEventListener('load', toggleScrollButtons);
+
+        function toggleScrollButtons() {
+            const nav = document.querySelector('nav');
+            const leftBtn = document.querySelector('.left-btn');
+            const rightBtn = document.querySelector('.right-btn');
+
+            // Check if nav can scroll left or right and hide/show buttons accordingly
+            if (nav.scrollWidth > nav.clientWidth) {
+                rightBtn.style.display = 'block';
+            } else {
+                rightBtn.style.display = 'none';
+            }
+
+            // Initially hide the left button because we start at the far left
+            leftBtn.style.display = 'none';
+
+            // Handle the scroll event to show/hide buttons dynamically
+            nav.addEventListener('scroll', () => {
+                if (nav.scrollLeft === 0) {
+                    leftBtn.style.display = 'none'; // Hide left button if scrolled to the start
+                } else {
+                    leftBtn.style.display = 'block'; // Show left button
+                }
+
+                if (nav.scrollLeft + nav.clientWidth >= nav.scrollWidth) {
+                    rightBtn.style.display = 'none'; // Hide right button if scrolled to the end
+                } else {
+                    rightBtn.style.display = 'block'; // Show right button
+                }
+            });
+        }
+
+    </script>
 
 </body>
 
