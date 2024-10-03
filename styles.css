@@ -94,6 +94,16 @@ nav::-webkit-scrollbar {
   .scroll-btn {
     display: block;
   }
+  
+  /* Centering for tablet screens */
+  .nav-wrapper {
+    justify-content: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
 
 /* Center the nav and hide buttons on larger screens */
